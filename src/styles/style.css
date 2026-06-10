@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+body.darkTheme{
+    background: url("/dark_bg2.jpeg") no-repeat center center/cover;
+    background-attachment: fixed;
+    color:#FFFFF4;
+}
+
+.lightTheme{
+    background: url("/light_bg1.jpeg") no-repeat center center/cover;
+    background-attachment: fixed;
+    color:black;
+}
