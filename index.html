@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Tickd | Homepage</title>
+    <link rel="shortcut icon" href="/tickd-todo/Todo.png" type="image/x-icon"> 
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet"/>
+    
+  <script type="module" crossorigin src="/tickd-todo/assets/index-BedwjWuw.js"></script>
+  <link rel="stylesheet" crossorigin href="/tickd-todo/assets/index-B9xUt_1W.css">
+
+  <body class="h-screen w-screen text-white ">
+    <header class="flex justify-between items-center px-5 py-6">
+      <div class="flex justify-center items-center gap-2">
+        <p id="logoText" class="text-3xl font-extrabold ">Tickd</p>
+      </div>
+
+      <button id="themeBtn" type="button" aria-label="Toggle dark mode" class="cursor-pointer active:scale-95">
+        <i aria-hidden="true" id="themeIcon" class="ri-sun-line text-xl"></i>
+      </button>
+
+    </header>
+    <main class="flex flex-col items-center gap-2 ">
+
+      <!-- For All PopUp toasts Div-->
+      <div id="toast-container" class="fixed right-10 top-2 flex flex-col gap-2 z-50"></div>
+
+      <section id="addTaskInputDiv" class="w-[80%] py-2 bg-white/10 backdrop-blur-lg  shadow-2xl transition-all hover:bg-white/20 rounded-4xl border md:w-[80%]">
+        <div id="inputField" class="flex flex-col justify-center w-full items-center gap-5 ">
+          
+          <form id="taskAdding" class="w-[80%] py-8">
+            <fieldset class="flex flex-col justify-center items-center gap-2 text-xl">
+              <div class="flex flex-col justify-center items-center text-center gap-8 w-[80%] md:flex-row">
+                <div class="flex flex-col justify-center items-center" >
+                  <lable id ="title" for="title"> Title </lable>
+                  <input id="taskTitle" type="text" class="border bg-white rounded text-black  px-2 h-8 wrap-break-word w-full " name="title" maxlength="50" placeholder="Title" required>
+                </div>
+ 
+                <div class="flex flex-col justify-center items-center">
+                  <label id="descritpion" for="description" required>Description</label>
+                  <input id="taskDescription" type="text" class="border bg-white rounded text-black px-2 h-8 wrap-break-word w-full" name="description" maxlength="100" placeholder="Description Max-100 Char" required>
+                </div>
+              </div>
+              <div class="mt-2 flex flex-col gap-2 md:gap-5 text-center md:flex-row">
+                <label  for="category">Category</label>
+                <select id="taskCategory" name="category" class="border bg-white text-black rounded text-center px-2">
+                  <option value="work">Work</option>
+                  <option value="personal">Personal</option>
+                  <option value="study">Study</option>
+                </select>
+
+                <label for="Priority">Priority</label>
+                <select id="taskPriority" name="priority" class="border bg-white text-black rounded text-center px-2">
+                  <option value="low" class="">Low</option>
+                  <option value="medium" >Medium</option>
+                  <option value="high">High</option>
+                </select>
+
+              </div>
+              <button id="addTask" type="submit" class="text-xl border rounded-full px-6 py-1 mt-5 cursor-pointer active:scale-95">Add Task</button>
+            </fieldset>
+          </form>
+        </div>
+        
+      </section >
+
+      <section class="w-[80%] flex flex-col justify-center items-center gap-2">
+          <div class="flex justify-center items-center gap-2 w-[65%]">
+            <input id="searchText" type="text" class="border rounded-2xl w-[80%] px-5 bg-white text-black" placeholder="Search tasks with Title...">
+            <button id="btnSearch" type="submit" class="cursor-pointer">
+              <i id="searchIcon" aria-label="Filter Search" class="ri-search-line"></i>
+            </button>
+          </div>
+
+          <div id="filter" class="flex gap-5 justify-center items-center w-[35%]">
+            <button id="btnFilterAllTasks" class="cursor-pointer px-2 py-1 rounded-xl active:scale-95 text-xs md:text-sm">All Tasks</button>
+            <button id="btnFilterActive" class="cursor-pointer px-2 py-1 rounded-xl active:scale-95 text-xs md:text-sm">Active</button>
+            <button id="btnFilterCompleted" class="cursor-pointer px-2 py-1 rounded-xl active:scale-95 text-xs md:text-sm">Completed</button>
+          </div>
+      </section>
+
+      <section id="showTasks" class=" w-[80%] flex justify-center gap-3 px-2 py-4 flex-wrap">
+          
+      </section>
+
+    </main>
+</div>
+
+  </body>
+</html>
